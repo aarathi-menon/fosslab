@@ -60,5 +60,4 @@ awk '{printf($1" "($2 + $3)/2)}' temp.txt > cs_s1_s2.txt
 sed -i 's/MDL/\nMDL/g' cs_s1_s2.txt
 join csb.txt cs_s1_s2.txt > csb2016.txt -1 6
 awk '{$2=""}1' csb2016.txt > csb16.txt
-echo "KTU Reg No  Roll No   Admn No  Name   CGPA" 
 nano csb16.txt
