@@ -56,7 +56,7 @@ sed -i 's/F)/ 0 /g' cs_s2.txt
 awk '{printf($1" "($2 * 4 + $3 * 4 + $4 * 3 + $5 * 1 + $6 * 1 + $7 * 4 + $8 * 3 + $9 * 3  + $10 * 1)/24)}' cs_s2.txt > temp2.txt
 sed -i 's/MDL/\nMDL/g' temp2.txt
 join temp1.txt temp2.txt > temp.txt
-awk '{printf($1" "($2 + $3)/2)}' temp.txt > cs_s1_s2.txt
+awk '{printf($1" "($2 * 23 + $3 * 24)/47)}' temp.txt > cs_s1_s2.txt
 sed -i 's/MDL/\nMDL/g' cs_s1_s2.txt
 join csb.txt cs_s1_s2.txt > csb2016.txt -1 6
 awk '{$2=""}1' csb2016.txt > csb16.txt
