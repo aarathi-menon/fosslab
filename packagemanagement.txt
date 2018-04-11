@@ -1,0 +1,54 @@
+sudo apt-get update
+sudo apt update
+
+#Only upgrades installed packages, where possible.
+sudo apt-get upgrade
+
+#May add or remove packages to satisfy new dependencies
+sudo apt-get dist-upgrade
+
+#Like ​ apt-get upgrade​ 
+sudo apt upgrade
+
+#Like ​ apt-get dist-upgrade​ 
+sudo apt full-upgrade 
+
+#To locate a package the following commands are used
+apt-cache search ​ search_string
+apt search ​ search_string
+
+#Information about a specefic package
+
+#Shows locally-cached info about a package
+apt-cache show package
+
+#Shows the current installed status of a package
+apt show package
+dpkg -s ​ package
+
+#Install a package from a repository
+
+#To install a package
+sudo apt-get install ​ package
+
+#Installs all listed packages
+sudo apt-get install ​ package1 package2 ...
+
+#Assumes "yes" where ​ apt​ would usually prompt to continue
+sudo apt-get install -y ​ package
+
+#Displays a colored progress bar
+sudo apt install ​ package
+
+#Install a Package from the Local Filesystem
+sudo dpkg -i ​ package.deb
+
+#Installs and uses ​ gdebi​ to install​ package.deb​ and retrieve any missing dependencies.
+sudo apt-get install -y​ gdebi​ && sudo gdebi​ package.deb
+
+#Remove One or More Installed Packages
+sudo apt-get remove ​ package
+sudo apt remove ​ package
+
+#Removes unneeded packages
+sudo apt-get autoremove
